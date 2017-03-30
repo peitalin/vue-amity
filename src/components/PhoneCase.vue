@@ -1,0 +1,44 @@
+
+<template>
+  <div class="phonecase">
+    <video v-bind:poster="video.videoPoster" id='iphone-video' autoplay="true" preload="" webkit-playsinline="" loop="">
+      <source v-bind:src="video.videoSource" type="video/mp4">
+      <!--<source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.m4v" type="video/m4v" />
+      <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.webm" type="video/webm" />
+      <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.ogv" type="video/ogg" />-->
+    </video>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["video"],
+}
+</script>
+
+
+<style lang="sass">
+
+
+
+:root {
+  --phone-case-height: 55vw;
+  --video-scale-height: 0.83333;
+  --phone-case-width: calc(0.58333333 * var(--phone-case-height));
+  --video-scale-width: 0.823;
+}
+
+.phonecase {
+    background: url(https://amity.io/img/holder.png) no-repeat;
+    background-size: var(--phone-case-width);
+    height: var(--phone-case-height);
+    width: var(--phone-case-width);
+    text-align: center;
+    padding-top: calc(0.149 * var(--phone-case-height));
+}
+video#iphone-video {
+  width: calc(var(--video-scale-width) * var(--phone-case-width));
+  height: calc(var(--video-scale-height) * var(--phoneCase-height));
+}
+
+</style>
