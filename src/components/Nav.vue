@@ -45,13 +45,21 @@ export default {
 .nav-inside {
   height: 0vh;
   width: 300px;
+  margin-right: 2%;
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     li {
       font-size: 0.8em;
-      color: #aaa;
+      a {
+        color: #ccc;
+        transition: color 0.2s ease;
+      }
+      a:hover {
+        color: #E0C082;
+        transition: color 0.2s ease;
+      }
     }
   }
 }

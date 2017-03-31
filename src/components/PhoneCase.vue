@@ -19,13 +19,11 @@ export default {
 
 <style lang="sass">
 
-
-
 :root {
   --phone-case-height: 55vw;
-  --video-scale-height: 0.83333;
+  --video-scale-height: 0.82;
   --phone-case-width: calc(0.58333333 * var(--phone-case-height));
-  --video-scale-width: 0.823;
+  --video-scale-width: 0.82;
 }
 
 .phonecase {
@@ -34,11 +32,28 @@ export default {
     height: var(--phone-case-height);
     width: var(--phone-case-width);
     text-align: center;
-    padding-top: calc(0.149 * var(--phone-case-height));
+    padding-top: calc(0.152 * var(--phone-case-height));
+    margin-left: 2px;
 }
+
 video#iphone-video {
   width: calc(var(--video-scale-width) * var(--phone-case-width));
   height: calc(var(--video-scale-height) * var(--phoneCase-height));
+}
+
+@media screen and (min-width: 1080px) {
+  .phonecase {
+      background: url(https://amity.io/img/holder.png) no-repeat;
+      height: 600px;
+      width: 350px;
+      text-align: center;
+      padding-top: 91px;
+      margin-left: 2px;
+  }
+  video#iphone-video {
+    height: 508px;
+    width: 290px;
+  }
 }
 
 </style>
