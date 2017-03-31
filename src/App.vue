@@ -6,14 +6,19 @@
 
     <div class='section-container'>
       <h1 class='section-title'>A complete messaging experience.</h1>
-      <div class='section-subtitle'>Amity is an interactive messaging app that brings everything together,
-and introduces a new level of live human interaction. All in one place.</div>
+      <div class='section-subtitle'>
+        Amity is an interactive messaging app that brings everything together,
+and introduces a new level of live human interaction. All in one place.
+      </div>
     </div>
+
 
     <div class='section2-container section-container'>
       <h1 class='section-title'>Interact freely with Live Mode.</h1>
-      <div class='section-subtitle'>Special features will activate when two or more people are together on the
-same screen. Express yourself with live emojis, live touch, and emoji bursts.</div>
+      <div class='section-subtitle'>
+        Special features will activate when two or more people are together on the
+same screen. Express yourself with live emojis, live touch, and emoji bursts.
+      </div>
       <div class='iphone-container'>
         <phoneCase v-bind:video="videos.live1"/>
         <phoneCase v-bind:video="videos.live2"/>
@@ -84,20 +89,24 @@ same screen. Express yourself with live emojis, live touch, and emoji bursts.</d
       </div>
     </div>
 
-    <Footer/>
+    <FooterLinks/>
 
   </div>
 </template>
 
 
 <script>
+import Vue from 'vue'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+Vue.use(VueYouTubeEmbed)
+
 import LandingPage from './components/LandingPage.vue'
 import ListPage from './components/ListPage.vue'
 import CreatePost from './components/CreatePost.vue'
 import Nav from './components/Nav.vue'
 import PhoneCase from './components/PhoneCase.vue'
 import VideoBackgroundTwo from './components/VideoBackgroundTwo.vue'
-import Footer from './components/Footer.vue'
+import FooterLinks from './components/Footer.vue'
 
 
 export default {
@@ -134,7 +143,7 @@ export default {
     'Create': CreatePost,
     'PhoneCase': PhoneCase,
     'VideoBackgroundTwo': VideoBackgroundTwo,
-    'Footer': Footer,
+    'FooterLinks': FooterLinks,
   },
 }
 </script>

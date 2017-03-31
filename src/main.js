@@ -29,7 +29,8 @@ Vue.use(VueApollo, {
 })
 
 // Start the app
-new Vue({
+var vm = new Vue({
   el: '#app',
   render: h => h(App)
 })
+
