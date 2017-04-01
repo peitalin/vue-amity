@@ -1,6 +1,6 @@
 
 <template>
-  <nav v-bind:class="[(scrollY < (htmlHeight - window.innerHeight - 1)) ? 'hide-nav' : 'nav-bar' ]">
+  <nav v-bind:class="[(scrollY < (htmlHeight - window.innerHeight - 50)) ? 'hide-nav' : 'nav-bar' ]">
     <!-- <div style='position:fixed; color:#aaa; left:50px; top:20px;'> -->
     <!--   ScrollY: {{ scrollY < window.innerHeight }} -->
     <!-- </div> -->
@@ -9,6 +9,7 @@
         <div v-for="link in links">
             <li><a v-bind:href="link.url">{{ link.text }}</a></li>
         </div>
+        <!-- {{ scrollY }} -->
       </ul>
     </div>
   </nav>
@@ -70,8 +71,7 @@ export default {
   right: 0;
   opacity: 1;
   transition: all 0.4s ease;
-  background-color: rgba(0,0,0,0.5);
-  // background: linear-gradient( to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2), rgba(0,0,0,0.2), rgba(0,0,0,0.9) );
+  background-color: rgba(0,0,0,0.8);
   width: 100vw;
   height: 50px;
   display: flex;
@@ -94,7 +94,7 @@ export default {
     li {
       font-size: 0.8em;
       a {
-        color: #ccc;
+        color: #ddd;
         transition: color 0.2s ease;
       }
       a:hover {

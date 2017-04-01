@@ -1,20 +1,22 @@
 
 <template>
-  <div class="videobg2-container">
+  <div>
+    <div class="videobg2-container">
 
-    <video id='videobg2' playsinline autoplay muted loop poster="https://d129oov5pfixbg.cloudfront.net/img/high5preview.jpg">
-      <source src="https://d129oov5pfixbg.cloudfront.net/video/high5.mp4" type="video/mp4">
-    </video>
+      <video id='videobg2' playsinline autoplay muted loop poster="https://d129oov5pfixbg.cloudfront.net/img/high5preview.jpg">
+        <source src="https://d129oov5pfixbg.cloudfront.net/video/high5.mp4" type="video/mp4">
+      </video>
 
-    <div class="videobg2-content">
-      <div class="videobg2-content-inner">
-          <h2 id="videobg2-title" class="section-title">Celebrate anytime with <br class="onlymobile">High Fives.</h2>
-          <div id="videobg2-subtitle" class="section-subtitle">
-            A first-of-its-kind interactive message that allows you to celebrate moments with friends throughout the day in real-time.
-          </div>
+      <div class="videobg2-content">
+        <div class="videobg2-content-inner">
+            <h2 id="videobg2-title" class="section-title">Celebrate anytime with <br class="onlymobile">High Fives.</h2>
+            <div id="videobg2-subtitle" class="section-subtitle">
+              A first-of-its-kind interactive message that allows you to celebrate moments with friends throughout the day in real-time.
+            </div>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </template>
 
