@@ -162,6 +162,7 @@ $navbarHeight: 60px;
 
 html {
   box-sizing: border-box;
+
 }
 
 *, *:before, *:after {

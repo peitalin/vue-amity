@@ -5,7 +5,7 @@
 
     <transition name="fade">
       <div v-if="playVideo" v-bind:class="['modalVideo', halfScreen ? 'modalVideo-halfscreen' : 'modalVideo-fullscreen']">
-        <iframe src="http://www.youtube.com/embed/ngBrlY2g0IM?autoplay=1&rel=0"></iframe>
+        <iframe src="https://www.youtube.com/embed/ngBrlY2g0IM?autoplay=1&rel=0"></iframe>
         <!-- <div v-on:click="playVideo = false" class="closeModalVideo"></div> -->
       </div>
     </transition>
@@ -47,8 +47,8 @@
               <!-- hide main play button when video is playing -->
               <div v-bind:class="[playVideo ? hide : '', 'relativeSVG']">
                 <svg class="video-play-button-svg" viewBox="0 0 200 200" alt="Play video">
-                  <circle cx="100" cy="100" r="90" fill="rgba(0,0,0,0.3)" stroke-width="10" stroke="#ddd"/>
-                  <polygon points="70, 55 70, 145 145, 100" fill="#ddd" stroke-width="10"/>
+                  <circle cx="100" cy="100" r="90" fill="rgba(0,0,0,0.3)" stroke-width="6" stroke="#ddd"/>
+                  <polygon points="70, 55 70, 145 145, 100" fill="#ddd" stroke-width="6"/>
                 </svg>
               </div>
 
@@ -256,7 +256,7 @@ video#videobg {
 .landing-page-hero {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -375,7 +375,7 @@ svg.video-play-button-svg {
   transition: transform 0.2s ease;
 }
 svg.video-play-button-svg:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   transition: transform 0.2s ease-in-out;
 }
 .video-play-button-text {
