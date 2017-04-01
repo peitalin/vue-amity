@@ -1,6 +1,6 @@
 
 <template>
-  <nav v-bind:class="[(scrollY < (htmlHeight - window.innerHeight - 50)) ? 'hide-nav' : 'nav-bar' ]">
+  <nav v-bind:class="[(scrollY > navbarCutoff) ? 'nav-bar' : 'hide-nav' ]">
     <!-- <div style='position:fixed; color:#aaa; left:50px; top:20px;'> -->
     <!--   ScrollY: {{ scrollY < window.innerHeight }} -->
     <!-- </div> -->
@@ -9,7 +9,6 @@
         <div v-for="link in links">
             <li><a v-bind:href="link.url">{{ link.text }}</a></li>
         </div>
-        <!-- {{ scrollY }} -->
       </ul>
     </div>
   </nav>
@@ -29,7 +28,7 @@ export default {
     ],
     scrollY: 0,
     window: window,
-    htmlHeight: Math.max(document.documentElement.clientHeight, document.body.scrollHeight),
+    navbarCutoff: Math.max(document.documentElement.clientHeight, document.body.scrollHeight) - window.innerHeight - 50,
   }),
   methods: {
     handleScroll () {
@@ -61,6 +60,7 @@ export default {
 
 .hide-nav {
   position: fixed;
+  display: none;
   opacity: 0;
   transition: all 0.4s ease;
 }
@@ -69,7 +69,6 @@ export default {
   position: fixed;
   top: 0;
   right: 0;
-  opacity: 1;
   transition: all 0.4s ease;
   background-color: rgba(0,0,0,0.8);
   width: 100vw;

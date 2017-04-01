@@ -6,6 +6,7 @@
       <div class="download-link">Get a free download link sent to your phone.</div>
       <button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 
+
       <div class="form-group" style="display:none;">
           <label>Name</label>
           <input type="text" name="name" class="form-control" value="">
