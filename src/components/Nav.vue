@@ -1,6 +1,6 @@
 
 <template>
-  <nav v-bind:class="[(scrollY < window.innerHeight*4) ? 'hide-nav' : 'nav-bar' ]">
+  <nav v-bind:class="[(scrollY < (htmlHeight - window.innerHeight - 1)) ? 'hide-nav' : 'nav-bar' ]">
     <!-- <div style='position:fixed; color:#aaa; left:50px; top:20px;'> -->
     <!--   ScrollY: {{ scrollY < window.innerHeight }} -->
     <!-- </div> -->
@@ -28,6 +28,7 @@ export default {
     ],
     scrollY: 0,
     window: window,
+    htmlHeight: Math.max(document.documentElement.clientHeight, document.body.scrollHeight),
   }),
   methods: {
     handleScroll () {

@@ -128,7 +128,7 @@ export default {
   color: #E0C082;
   z-index: 5;
   width: 100vw;
-  height: 50px;
+  height: 60px;
   padding: 2%;
   background: rgba(0,0,0,0.9);
 }
@@ -136,7 +136,7 @@ export default {
   position: fixed;
   color: #E0C082;
   width: 100vw;
-  height: 50px;
+  height: 60px;
   padding: 2%;
   bottom: 0;
   background: rgba(0,0,0,0.9);
@@ -163,7 +163,7 @@ export default {
 }
 
 .closeModalVideo {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.8);
   height: 100vh;
   width: 100vw;
   z-index: 2;
@@ -186,13 +186,14 @@ iframe {
   width: 100%;
   height: 100%;
   border: 0px solid #222;
+  background: rgba(0,0,0,0.8);
 }
 @media screen and (min-aspect-ratio: 8/16) and (max-width: 600px) {
   // portrait mode on mobile
   .modalVideo-halfscreen {
     position: fixed;
     width: 100vw;
-    height: 40vh;
+    height: 25vh;
     border: 0px solid #222;
     transition: all 0.6s ease;
   }
@@ -261,12 +262,12 @@ video#videobg {
 
 .fade-enter-active, .fade-leave-active {
   opacity: 1;
-  transition: opacity .4s ease;
+  transition: opacity .8s ease;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
-  transition: opacity .4s;
-  transition-delay: 0.1s;
+  transition: opacity .8s;
+  transition-delay: 0.0s;
 }
 .hide {
   opacity: 0;
@@ -299,8 +300,8 @@ video#videobg {
     top: -2%;
   }
   .button-center {
-    left: 44%;
-    top: 35%;
+    left: 40vw;
+    top: calc(25vh - 38px);
   }
 }
 @media screen and (min-aspect-ratio: 16/10) and (max-width: 780px) {

@@ -227,6 +227,11 @@ ul li {
   background-color: #f9f9f9;
   padding: 10% 15% 0%;
 }
+@media screen and (min-aspect-ratio: 8/16) and (max-width: 600px) {
+  .section2-container {
+    padding: 10% 5% 0%;
+  }
+}
 
 .section3-container {
   flex-direction: row;
