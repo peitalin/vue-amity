@@ -2,10 +2,10 @@
 <template>
   <div class="phonecase">
     <video v-bind:poster="video.videoPoster" id='iphone-video' autoplay="true" preload="" webkit-playsinline="" loop="">
-      <source v-bind:src="video.videoSource" type="video/mp4">
-      <!--<source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.m4v" type="video/m4v" />
-      <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.webm" type="video/webm" />
-      <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.ogv" type="video/ogg" />-->
+      <source v-bind:src="video.videoSourceMP4" type="video/mp4">
+      <!-- <source v-bind:src="video.videoSourceWEBM" type="video/webm" /> -->
+      <!-- <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.m4v" type="video/m4v" /> -->
+      <!-- <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.ogv" type="video/ogg" /> -->
     </video>
   </div>
 </template>
@@ -19,11 +19,24 @@ export default {
 
 <style lang="sass">
 
+
 :root {
   --phone-case-height: 55vw;
   --video-scale-height: 0.82;
   --phone-case-width: calc(0.58333333 * var(--phone-case-height));
   --video-scale-width: 0.82;
+}
+@media screen and (min-aspect-ratio: 8/16) and (max-width: 600px) {
+  // portrait mode on mobile
+  :root {
+    --phone-case-height: 66vw;
+  }
+}
+@media screen and (min-aspect-ratio: 16/10) and (max-width: 780px) {
+  // landscape mode on mobile
+  :root {
+    --phone-case-height: 55vw;
+  }
 }
 
 .phonecase {

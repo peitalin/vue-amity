@@ -116,23 +116,28 @@ export default {
     videos: {
       live1: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSource: "https://d129oov5pfixbg.cloudfront.net/video/left.mp4"
+        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/left.mp4",
       },
       live2: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSource: "https://d129oov5pfixbg.cloudfront.net/video/right.mp4"
+        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/right.mp4",
       },
       live3: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSource: "https://d129oov5pfixbg.cloudfront.net/video/interactivenewest.mp4"
+        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/interactivenewest.mp4",
       },
       live4: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSource: "https://d129oov5pfixbg.cloudfront.net/video/interactive.mp4"
+        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/interactive.mp4",
       },
       live5: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSource: "https://d129oov5pfixbg.cloudfront.net/video/memories.mp4"
+        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/memories.mp4",
       },
     }
   }),
@@ -158,16 +163,17 @@ $navbarHeight: 60px;
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 
 body, input, button {
   font-family: Raleway, Open Sans, Helvetica, sans-serif;
   font-size: 16pt;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
   background-color: #fff;
 }
 
@@ -188,6 +194,7 @@ ul li {
 
 <style lang='sass'>
 .app {
+  overflow-x: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;

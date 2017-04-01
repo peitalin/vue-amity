@@ -39,14 +39,6 @@
 
 <style lang='sass'>
 
-.amitylogo {
-  margin-top: 25vh;
-  margin-bottom: 2%;
-  max-height: 25vh;
-  width: 66vw;
-  max-width: 400px;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -87,9 +79,6 @@
 
 @media screen and (min-aspect-ratio: 16/10) and (max-width: 780px) {
   // landscape mode on mobile
-  .amitylogo {
-    margin-bottom: 0%;
-  }
   .form-container {
     display: flex;
     flex-direction: row;
@@ -119,7 +108,7 @@
 
 <style lang='sass'>
 #download-form {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .download-link {
   color: #fff;
