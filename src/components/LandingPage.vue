@@ -62,7 +62,7 @@
               </div>
 
               <div class="video-play-button-text">
-                <div v-bind:class="[playVideo ? inactiveClass : '']">
+                <div v-bind:class="[playVideo ? hide : '']">
                     Watch the video
                 </div>
               </div>
@@ -385,39 +385,3 @@ svg.video-play-button-svg:hover {
 </style>
 
 
-<style lang='sass'>
-.appstores-link {
-  color: #eee;
-}
-.appstores-link:hover {
-  color: #E0C082;
-}
-#applestore {
-  width: 16vw;
-  min-width: 140px;
-  max-width: 160px;
-  transition: transform 0.2s ease;
-}
-#applestore:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-#applestore:active {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-#playstore {
-  width: 16vw;
-  min-width: 140px;
-  max-width: 160px;
-  transition: transform 0.2s ease;
-}
-#playstore:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-#playstore:active {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-</style>

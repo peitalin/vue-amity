@@ -1,9 +1,9 @@
 
 <template>
   <div class="phonecase">
-    <video v-bind:poster="video.videoPoster" id='iphone-video' autoplay="true" preload="" webkit-playsinline="" loop="">
+    <video v-bind:poster="video.videoPoster" id='iphone-video' autoplay muted playsinline loop>
+      <source v-bind:src="video.videoSourceWEBM" type="video/webm" />
       <source v-bind:src="video.videoSourceMP4" type="video/mp4">
-      <!-- <source v-bind:src="video.videoSourceWEBM" type="video/webm" /> -->
       <!-- <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.m4v" type="video/m4v" /> -->
       <!-- <source src="https://d129oov5pfixbg.cloudfront.net/video/vid1.ogv" type="video/ogg" /> -->
     </video>

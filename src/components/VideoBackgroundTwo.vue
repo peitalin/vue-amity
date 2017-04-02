@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div style='display:flex;'>
     <div class="videobg2-container">
 
       <video id='videobg2' playsinline autoplay muted loop poster="https://d129oov5pfixbg.cloudfront.net/img/high5preview.jpg">
@@ -77,7 +77,7 @@
 video#videobg2 {
   z-index: -1;
   position: absolute;
-  top: 50vh;
+  top: 33vh;
   left: 50vw;
   transform: translate3d(-50%, -50%, 0);
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -92,7 +92,6 @@ video#videobg2 {
 <script>
 export default {
   data: () => ({
-    allPosts: {},
     loading: 0,
   }),
   components: {

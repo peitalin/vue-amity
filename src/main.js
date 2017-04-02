@@ -8,13 +8,11 @@ const networkInterface = createNetworkInterface({
   uri: 'https://api.graph.cool/simple/v1/cj0vrlnio4t6k0102eo7p0a9z',
 })
 
-// The x-graphcool-source header is not necessary for your project
 networkInterface.use([{
   applyMiddleware (req, next) {
     if (!req.options.headers) {
       req.options.headers = {}
     }
-    req.options.headers['x-graphcool-source'] = 'example:vue-apollo-instagram'
     next()
   },
 }])

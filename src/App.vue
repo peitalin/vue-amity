@@ -8,7 +8,7 @@
       <h1 class='section-title'>A complete messaging experience.</h1>
       <div class='section-subtitle'>
         Amity is an interactive messaging app that brings everything together,
-and introduces a new level of live human interaction. All in one place.
+        and introduces a new level of live human interaction. All in one place.
       </div>
     </div>
 
@@ -17,7 +17,7 @@ and introduces a new level of live human interaction. All in one place.
       <h1 class='section-title'>Interact freely with Live Mode.</h1>
       <div class='section-subtitle'>
         Special features will activate when two or more people are together on the
-same screen. Express yourself with live emojis, live touch, and emoji bursts.
+        same screen. Express yourself with live emojis, live touch, and emoji bursts.
       </div>
       <div class='iphone-container'>
         <phoneCase v-bind:video="videos.live1"/>
@@ -84,7 +84,7 @@ same screen. Express yourself with live emojis, live touch, and emoji bursts.
       </div>
       <div class='section3-items'>
         <div class='iphone-container'>
-          <PhoneCase v-bind:video="videos.live3"/>
+          <PhoneCase v-bind:video="videos.live5"/>
         </div>
       </div>
     </div>
@@ -95,11 +95,8 @@ same screen. Express yourself with live emojis, live touch, and emoji bursts.
 </template>
 
 
-<script>
-import Vue from 'vue'
-import VueYouTubeEmbed from 'vue-youtube-embed'
-Vue.use(VueYouTubeEmbed)
 
+<script>
 import LandingPage from './components/LandingPage.vue'
 import ListPage from './components/ListPage.vue'
 import CreatePost from './components/CreatePost.vue'
@@ -109,6 +106,7 @@ import VideoBackgroundTwo from './components/VideoBackgroundTwo.vue'
 import FooterLinks from './components/Footer.vue'
 
 
+
 export default {
   name: 'app',
   data: () => ({
@@ -116,27 +114,27 @@ export default {
     videos: {
       live1: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceWEBM: "https://s3-ap-southeast-2.amazonaws.com/amitylandingpage/left.webm",
         videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/left.mp4",
       },
       live2: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceWEBM: "https://s3-ap-southeast-2.amazonaws.com/amitylandingpage/right.webm",
         videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/right.mp4",
       },
       live3: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceWEBM: "https://s3-ap-southeast-2.amazonaws.com/amitylandingpage/interactivenewest.webm",
         videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/interactivenewest.mp4",
       },
       live4: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceWEBM: "https://s3-ap-southeast-2.amazonaws.com/amitylandingpage/interactive.webm",
         videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/interactive.mp4",
       },
       live5: {
         videoPoster: "https://d129oov5pfixbg.cloudfront.net/img/previewbro.jpg",
-        videoSourceWEBM: "https://d129oov5pfixbg.cloudfront.net/video/vid1.webm",
+        videoSourceWEBM: "https://s3-ap-southeast-2.amazonaws.com/amitylandingpage/memories.webm",
         videoSourceMP4: "https://d129oov5pfixbg.cloudfront.net/video/memories.mp4",
       },
     }
@@ -150,6 +148,10 @@ export default {
     'VideoBackgroundTwo': VideoBackgroundTwo,
     'FooterLinks': FooterLinks,
   },
+  created () {
+  },
+  destroyed () {
+  }
 }
 </script>
 
@@ -157,12 +159,27 @@ export default {
 
 <style lang='sass'>
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/IY9HZVvI1cMoAHxvl0w9LVKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/22JRxvfANxSmnAhzbFH8PgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 $navbarHeight: 60px;
 
 html {
   box-sizing: border-box;
-
+  font-weight: 300;
 }
 
 *, *:before, *:after {
@@ -171,7 +188,7 @@ html {
 
 
 body, input, button {
-  font-family: Raleway, Open Sans, Helvetica, sans-serif;
+  font-family: Lato, Helvetica, sans-serif;
   font-size: 16pt;
   margin: 0px;
   padding: 0px;
@@ -212,12 +229,12 @@ ul li {
 }
 .section-title {
   color: #444;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2.6rem;
 }
 
 .section-subtitle {
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2rem;
   color: #999;
   padding-bottom: 5%;

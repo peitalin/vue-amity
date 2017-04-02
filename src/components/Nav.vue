@@ -1,6 +1,6 @@
 
 <template>
-  <nav v-bind:class="[(scrollY > navbarCutoff) ? 'nav-bar' : 'hide-nav' ]">
+  <nav v-bind:class="[(scrollY > window.innerHeight*5) ? 'nav-bar' : 'hide-nav' ]">
     <!-- <div style='position:fixed; color:#aaa; left:50px; top:20px;'> -->
     <!--   ScrollY: {{ scrollY < window.innerHeight }} -->
     <!-- </div> -->
